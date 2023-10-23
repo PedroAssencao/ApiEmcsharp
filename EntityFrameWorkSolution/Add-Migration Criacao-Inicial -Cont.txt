@@ -1,0 +1,2 @@
+Add-Migration Criacao-Inicial -Context Contexto
+Update-database -Context Contexto
