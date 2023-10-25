@@ -8,7 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<Contexto>
-    (Options => Options.UseSqlServer("Server=DESKTOP-VIKGCGP\\SQLEXPRESS; Database=AlfabetizaDB; User Id=sa; Password=6411; TrustServerCertificate=true"));
+    //(Options => Options.UseSqlServer("Server=DESKTOP-VIKGCGP\\SQLEXPRESS; Database=AlfabetizaDB; User Id=sa; Password=6411; TrustServerCertificate=true"));
+    (Options => Options.UseSqlServer("Server=LAPTOP-M68K5TBC\\SQLEXPRESS; Database=EntityTesteDB; Integrated Security=True; TrustServerCertificate=true"));
 
 var app = builder.Build();
 

@@ -11109,19 +11109,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Pedro Marcelo\\.nuget\\packages\\": {}
+    "C:\\Users\\silva\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pedro Marcelo\\Documents\\GitHub\\ApiEmcsharp\\EntityFrameWorkSolution\\EntityFrameWork\\EntityFrameWork.csproj",
+      "projectUniqueName": "C:\\Users\\silva\\Documents\\GitHub\\ApiEmcsharp\\EntityFrameWorkSolution\\EntityFrameWork\\EntityFrameWork.csproj",
       "projectName": "EntityFrameWork",
-      "projectPath": "C:\\Users\\Pedro Marcelo\\Documents\\GitHub\\ApiEmcsharp\\EntityFrameWorkSolution\\EntityFrameWork\\EntityFrameWork.csproj",
-      "packagesPath": "C:\\Users\\Pedro Marcelo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pedro Marcelo\\Documents\\GitHub\\ApiEmcsharp\\EntityFrameWorkSolution\\EntityFrameWork\\obj\\",
+      "projectPath": "C:\\Users\\silva\\Documents\\GitHub\\ApiEmcsharp\\EntityFrameWorkSolution\\EntityFrameWork\\EntityFrameWork.csproj",
+      "packagesPath": "C:\\Users\\silva\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\silva\\Documents\\GitHub\\ApiEmcsharp\\EntityFrameWorkSolution\\EntityFrameWork\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Pedro Marcelo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\silva\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11129,7 +11129,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -11186,7 +11186,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }
