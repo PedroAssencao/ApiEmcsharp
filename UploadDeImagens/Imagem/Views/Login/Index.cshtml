@@ -1,0 +1,46 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="container d-flex justify-content-center align-items-center align-content-center flex-column">
+    <div class="Image">
+        <input type="file" id="fileInput" style="display: none;" accept="image/*">
+        <label for="fileInput">
+            <img style="cursor:pointer;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Antu_insert-image.svg/1200px-Antu_insert-image.svg.png" class="rounded-circle" alt="Imagem" width="150" height="150">
+        </label>
+    </div>
+    <div class="inputs">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">user</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">passoword</span>
+            <input type="password" id="input" value="" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <button class="btn btn-primary" onclick="senha()" id="btn">Show</button>
+        </div>
+    </div>
+    <div class="button">
+        <button class="btn btn-dark">Atualizar</button>
+    </div>
+</div>
+
+<script>
+   
+    function senha() {
+      
+        var input = document.getElementById('input')
+        var btn = document.getElementById('btn')
+        if (input.attributes.type.value == "password") {
+            input.attributes.type.value = "text"
+            btn.textContent = 'Hide'
+        }else{
+            input.attributes.type.value = "password"
+            btn.textContent = 'Show'
+        }
+        
+    }
+</script>
