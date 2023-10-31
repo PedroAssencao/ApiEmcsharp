@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "dRWU6ksxMMCdHAJN1Mlrgd9Z5vSafPRCs2gxmuA8q+W76UDgL/Ux3BuPwsOua1yPrc0bX0XNlfjXw2GjFfrqWw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Pedro Marcelo\\Documents\\GitHub\\ApiEmcsharp\\ApiBase\\PrimeiraApiemC#\\PrimeiraApi\\PrimeiraApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Pedro Marcelo\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\Pedro Marcelo\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Pedro Marcelo\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\Pedro Marcelo\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\Pedro Marcelo\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\Pedro Marcelo\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
