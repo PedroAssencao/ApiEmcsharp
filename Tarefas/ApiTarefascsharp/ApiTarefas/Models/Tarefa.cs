@@ -9,5 +9,8 @@ namespace ApiTarefas.Models
         public string? nome { get; set; }
         public string? descricao { get; set; }
         public StatusTarefa Status { get; set; }
+        public int? usuarioID { get; set; }
+
+        public virtual Usuario? usuario { get; set; } 
     }
 }

@@ -36,7 +36,7 @@ namespace ApiTarefas.Controllers
         }
 
 
-        [HttpPut("{id}")]
+        [HttpPut("{id}")]   
         public async Task<ActionResult<Usuario>> Atualizar([FromBody] Usuario usuario,int id)
         {
             usuario.id = id;
