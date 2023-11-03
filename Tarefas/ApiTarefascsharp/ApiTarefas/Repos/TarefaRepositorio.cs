@@ -27,7 +27,6 @@ namespace ApiTarefas.Repos
         {
             await _context.tarefas.AddAsync(Tarefa);
             await _context.SaveChangesAsync();
-
             return Tarefa;
         }
 
