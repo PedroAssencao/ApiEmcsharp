@@ -25,6 +25,7 @@ namespace ApiTarefas
                 );
 
             builder.Services.AddScoped<IUsuarioRepo, UsuariosRepositorio>();
+            builder.Services.AddScoped<ITarefaRepo, TarefaRepositorio>();
 
             var app = builder.Build();
 
