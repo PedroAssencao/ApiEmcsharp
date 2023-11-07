@@ -7,7 +7,7 @@ namespace ApiTarefas.Repos.Interfaces
         Task<List<Usuario>> BuscarTodosUsuarios();
         Task<Usuario> BuscarPorID(int id);
         Task<Usuario> Adicionar(Usuario usuarios);
-        Task<Usuario> Atualizar(Usuario usuario, int id);
-        Task<bool> Apagar(int id);
+        Task<Usuario> Atualizar(Usuario usuario);
+        Task<bool> Apagar(Usuario id);
     }
 }

@@ -1,6 +1,7 @@
 using ApiTarefas.Data;
 using ApiTarefas.Repos;
 using ApiTarefas.Repos.Interfaces;
+using ApiTarefas.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -26,6 +27,7 @@ namespace ApiTarefas
 
             builder.Services.AddScoped<IUsuarioRepo, UsuariosRepositorio>();
             builder.Services.AddScoped<ITarefaRepo, TarefaRepositorio>();
+            builder.Services.AddScoped<UsuarioService>();
 
             var app = builder.Build();
 

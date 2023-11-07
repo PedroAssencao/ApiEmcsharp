@@ -25,6 +25,7 @@ namespace ApiTarefas.Repos
         }
         public async Task<Tarefa> Adicionar(Tarefa Tarefa)
         {
+            
             await _context.tarefas.AddAsync(Tarefa);
             await _context.SaveChangesAsync();
             return Tarefa;
@@ -38,11 +39,6 @@ namespace ApiTarefas.Repos
             {
                 throw new Exception($"A Tarefa {id} Não foi Encontrado.");
             }
-
-            TarefaPorID.usuarioID = Tarefa.usuarioID;
-            TarefaPorID.descricao = Tarefa.descricao;
-            TarefaPorID.Status = Tarefa.Status;
-            TarefaPorID.nome = Tarefa.nome;
 
             _context.tarefas.Update(TarefaPorID);
             await _context.SaveChangesAsync();

@@ -7,63 +7,38 @@ namespace ApiTarefas.Repos
 {
     public class UsuariosRepositorio : IUsuarioRepo
     {
-        private readonly SistemaTarefasDBcontext _context;
-        public UsuariosRepositorio(SistemaTarefasDBcontext SistemaTarefasDBcontext)
+        private readonly BaseRepository<Usuario> _context;
+        public UsuariosRepositorio(BaseRepository<Usuario> SistemaTarefasDBcontext)
         {
             _context = SistemaTarefasDBcontext;
         }
 
-        public async Task<Usuario> BuscarPorID(int id)
+        public async Task<Usuario?> BuscarPorID(int id)
         {
-            return await _context.Usuarios.FirstOrDefaultAsync(x => x.id == id);
+            return await _context.buscarporid(id);
         }
 
         public async Task<List<Usuario>> BuscarTodosUsuarios()
         {
-            return await _context.Usuarios.ToListAsync();
+            return await _context.BuscarTodosUsuarios();
 
         }
         public async Task<Usuario> Adicionar(Usuario usuarios)
         {
-            await _context.Usuarios.AddAsync(usuarios);
-            await _context.SaveChangesAsync();
-
+            await _context.Add(usuarios);
             return usuarios;
         }
 
-        public async Task<Usuario> Atualizar(Usuario usuario, int id)
+        public async Task<Usuario> Atualizar(Usuario usuario)
         {
-            Usuario UsuarioPorID = await BuscarPorID(id);
-
-            if (UsuarioPorID == null)
-            {
-                throw new Exception($"O usuario {id} Não foi Encontrado.");
-            }
-
-            UsuarioPorID.nome = usuario.nome;
-            UsuarioPorID.email = usuario.email;
-
-            _context.Usuarios.Update(UsuarioPorID);
-            await _context.SaveChangesAsync();
-            return UsuarioPorID;
+            await _context.Atualizar(usuario);
+            return usuario;
         }
 
-        public async Task<bool> Apagar(int id)
+        public async Task<bool> Apagar(Usuario usuario)
         {
-            Usuario UsuarioPorID = await BuscarPorID(id);
-
-            if (UsuarioPorID == null)
-            {
-                throw new Exception($"O usuario {id} Não foi Encontrado.");
-            }
-
-            _context.Usuarios.Remove(UsuarioPorID);
-            await _context.SaveChangesAsync();
+            await _context.Apagar(usuario);
             return true;
         }
-
-        
-
-     
     }
 }
