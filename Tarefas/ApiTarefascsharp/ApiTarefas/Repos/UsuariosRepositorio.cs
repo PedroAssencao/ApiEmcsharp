@@ -5,39 +5,34 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ApiTarefas.Repos
 {
-    public class UsuariosRepositorio : IUsuarioRepo
+    public class UsuariosRepositorio : BaseRepository<Usuario>, IUsuarioRepo
     {
-        private readonly BaseRepository<Usuario> _context;
-        public UsuariosRepositorio(BaseRepository<Usuario> SistemaTarefasDBcontext)
-        {
-            _context = SistemaTarefasDBcontext;
-        }
-
+     
         public async Task<Usuario?> BuscarPorID(int id)
         {
-            return await _context.buscarporid(id);
+            return await buscarporid(id);
         }
 
         public async Task<List<Usuario>> BuscarTodosUsuarios()
         {
-            return await _context.BuscarTodosUsuarios();
+            return await BuscarTodosUsuarios();
 
         }
         public async Task<Usuario> Adicionar(Usuario usuarios)
         {
-            await _context.Add(usuarios);
+            await Add(usuarios);
             return usuarios;
         }
 
         public async Task<Usuario> Atualizar(Usuario usuario)
         {
-            await _context.Atualizar(usuario);
+            await Atualizar(usuario);
             return usuario;
         }
 
         public async Task<bool> Apagar(Usuario usuario)
         {
-            await _context.Apagar(usuario);
+            await Apagar(usuario);
             return true;
         }
     }

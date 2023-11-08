@@ -25,9 +25,9 @@ namespace ApiTarefas
                 options => options.UseSqlServer(builder.Configuration.GetConnectionString("DataBase"))
                 );
 
-            builder.Services.AddScoped<IUsuarioRepo, UsuariosRepositorio>();
-            builder.Services.AddScoped<ITarefaRepo, TarefaRepositorio>();
-            builder.Services.AddScoped<UsuarioService>();
+            builder.Services.AddTransient<IUsuarioRepo, UsuariosRepositorio>();
+            builder.Services.AddTransient<ITarefaRepo, TarefaRepositorio>();
+            builder.Services.AddTransient<UsuarioService>();
 
             var app = builder.Build();
 
