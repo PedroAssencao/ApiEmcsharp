@@ -1,5 +1,6 @@
 ﻿using ApiTarefas.Data;
 using ApiTarefas.Models;
+using ApiTarefas.Repos.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.Metadata.Ecma335;
 using System.Threading.Tasks;
@@ -21,9 +22,9 @@ namespace ApiTarefas.Repos
             return model;
         }
 
-        public async Task<bool> Apagar(TModel TModel)
+        public async Task<bool> Apagar(Usuario usuario)
         {
-            _context.Remove(TModel);
+            _context.Remove(usuario);
             await _context.SaveChangesAsync();
             return true;
         }
@@ -35,12 +36,12 @@ namespace ApiTarefas.Repos
             return TModel;
         }
 
-        public async Task<List<TModel>> BuscarTodosUsuarios()
+  
+        public Task<List<TModel>> BuscarTodosUsuarios()
         {
-            return await _context.Set<TModel>().ToListAsync();
-
-
+            return Task.Run(() => _context.Set<TModel>().ToListAsync().Result);
         }
+
         public async Task<TModel?> buscarporid(int id)
         {
 
@@ -48,31 +49,5 @@ namespace ApiTarefas.Repos
 
         }
 
-
     }
-
-    //public class Batata : BaseRepository<Usuario>
-    //{
-    //    public void adicionar()
-    //    {
-    //        _context.Usuarios.Add(new Usuario());
-
-    //        return null
-    //    }
-        
-    //}
-
-    //public class aaaa : BaseRepository<Tarefa>
-    //{
-    //}
-
-    //public class exemplo
-    //{
-    //    private readonly Batata batata;
-    //    public exemplo()
-    //    {
-    //        batata = new Batata();
-    //        batata.Add()
-    //    }
-    //}
 }

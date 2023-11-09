@@ -1,46 +1,57 @@
-﻿using ApiTarefas.Models;
+﻿using ApiTarefas.Data;
+using ApiTarefas.Models;
 using ApiTarefas.Repos;
 using ApiTarefas.Repos.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace ApiTarefas.Services
 {
-    public class UsuarioService
+    public class UsuarioService : UsuariosRepositorio
     {
-        private readonly IUsuarioRepo _repository;
-
-        public UsuarioService(IUsuarioRepo repository)
+        public UsuarioService(SistemaTarefasDBcontext SistemaTarefasDBcontext) : base(SistemaTarefasDBcontext)
         {
-            _repository = repository;
+
         }
 
-        public async Task<Usuario> Atualizar(Usuario usuario, int id)
+        public async Task<List<Usuario>> ListaUsuario()
         {
-            Usuario? UsuarioPorID = await _repository.BuscarPorID(id);
+            var usuarios = await BuscarTodosUsuarios();
+            return usuarios;
+        }
 
-            if (UsuarioPorID == null)
+        public async Task<Usuario> BuscarUsuarioExpecifico(int id)
+        {
+            var usuarios = await buscarporid(id);
+            return usuarios;
+        }
+
+        public async Task<Usuario> AdicionarUsuario(Usuario usuario)
+        {
+            var usuarios = await Add(usuario);
+            return usuarios;
+        }
+
+        public async Task<Usuario> AtualizarUsuario(int id, Usuario usuario)
+        {
+            var usuarios = await buscarporid(id);
+            usuarios.nome = usuario.nome ; 
+            usuarios.email = usuario.email;
+            var usuarioss = await Atualizar(usuarios);
+            return usuarioss;
+        }
+
+        public async Task<bool> ApagarUsuario(int id) 
+        {
+            var usuarios = await buscarporid(id);
+
+            if (usuarios == null)
             {
                 throw new Exception($"O usuario {id} Não foi Encontrado.");
             }
-
-            UsuarioPorID.nome = usuario.nome?.ToLower();
-            UsuarioPorID.email = usuario.email?.ToLower() ?? throw new Exception();
-
-            await _repository.Atualizar(usuario);
-            return UsuarioPorID;
-        }
-
-        public async Task<bool> Apagar(int id)
-        {
-            Usuario? UsuarioPorID = await _repository.BuscarPorID(id);
-
-            if (UsuarioPorID == null)
-            {
-                throw new Exception($"O usuario {id} Não foi Encontrado.");
-            }
-
-            await _repository.Apagar(UsuarioPorID);
+            
+            var usuarioss = await Apagar(usuarios);
             return true;
+
         }
 
 

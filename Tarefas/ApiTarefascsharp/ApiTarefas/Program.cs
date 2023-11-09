@@ -20,14 +20,14 @@ namespace ApiTarefas
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddEntityFrameworkSqlServer().AddDbContext<SistemaTarefasDBcontext>(
+            builder.Services.AddDbContext<SistemaTarefasDBcontext>(
                 
                 options => options.UseSqlServer(builder.Configuration.GetConnectionString("DataBase"))
                 );
 
-            builder.Services.AddTransient<IUsuarioRepo, UsuariosRepositorio>();
-            builder.Services.AddTransient<ITarefaRepo, TarefaRepositorio>();
-            builder.Services.AddTransient<UsuarioService>();
+            builder.Services.AddScoped<UsuariosRepositorio>();
+            builder.Services.AddScoped<ITarefaRepo, TarefaRepositorio>();
+            builder.Services.AddScoped<UsuarioService>();
 
             var app = builder.Build();
 

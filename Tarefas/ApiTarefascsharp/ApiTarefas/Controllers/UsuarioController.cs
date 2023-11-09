@@ -12,19 +12,17 @@ namespace ApiTarefas.Controllers
     public class UsuarioController : ControllerBase
     {
         private readonly UsuarioService _usuarioService;
-        private readonly IUsuarioRepo _usuariorepo;
 
-        public UsuarioController(IUsuarioRepo usuarioRepo, UsuarioService usuarioService)
+        public UsuarioController(UsuarioService usuarioService)
         {
-            _usuariorepo = usuarioRepo;
             _usuarioService = usuarioService;
         }
 
         [HttpGet]
         [Route("BuscarUsuarios")]
-        public async Task <ActionResult<List<Usuario>>> BuscarTodosUsuarios()
+        public async Task<IActionResult> BuscarTodosUsuarios()
         {
-            List<Usuario> usuarios =  await _usuariorepo.BuscarTodosUsuarios();
+            List<Usuario> usuarios = await _usuarioService.ListaUsuario();
             return Ok(usuarios);
         }
 
@@ -32,31 +30,29 @@ namespace ApiTarefas.Controllers
         [Route("BuscarUsuarios/{id}")]
         public async Task<ActionResult<Usuario>> BuscarPorId(int id)
         {
-            Usuario? usuarios = await _usuariorepo.BuscarPorID(id);
+            Usuario? usuarios = await _usuarioService.BuscarUsuarioExpecifico(id);
             return Ok(usuarios);
         }
 
         [HttpPost]
         public async Task<ActionResult<Usuario>> Cadastrar([FromBody] Usuario usuario)
         {
-            Usuario usuarios = await _usuariorepo.Adicionar(usuario);
+            Usuario usuarios = await _usuarioService.AdicionarUsuario(usuario);
             return Ok(usuarios);
         }
 
 
-        [HttpPut("{id}")]   
-        public async Task<ActionResult<Usuario>> Atualizar([FromBody] Usuario usuario,int id)
+        [HttpPut("{id}")]
+        public async Task<ActionResult<Usuario>> Atualizar(int id, [FromBody] Usuario usuario)
         {
-            usuario.id = id;
-            Usuario usuarios = await _usuarioService.Atualizar(usuario, id);
-            return Ok(usuarios);
+            Usuario usuarios = await _usuarioService.AtualizarUsuario(id, usuario);
+            return usuarios;
         }
 
         [HttpDelete("{id}")]
         public async Task<ActionResult<Usuario>> Apagar(int id)
         {
-       
-            bool usuarios = await _usuarioService.Apagar(id);
+            bool usuarios = await _usuarioService.ApagarUsuario(id);
             return Ok(usuarios);
         }
 
