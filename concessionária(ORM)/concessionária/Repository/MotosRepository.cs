@@ -8,5 +8,6 @@ namespace concessionária.Repository
         public MotosRepository(ConssesionariaDbContext Conexao) : base(Conexao)
         {
         }
+
     }
 }

@@ -42,7 +42,7 @@ namespace concessionária.Controllers
         [HttpGet]
         public async Task<IActionResult> Update(int id)
         {
-            ViewBag.Infos = await _carrosServices.BuscarPorID(id);
+            ViewBag.Infos = await _carrosServices.BuscarCarrosPorId(id);
             return View();
         }
 

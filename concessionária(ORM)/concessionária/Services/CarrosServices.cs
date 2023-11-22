@@ -4,15 +4,18 @@ using concessionária.Repository;
 
 namespace concessionária.Services
 {
-    public class CarrosServices : CarrosRepository
+    public class CarrosServices
     {
-        public CarrosServices(ConssesionariaDbContext Conexao) : base(Conexao)
+        private readonly CarrosRepository _repository;
+
+        public CarrosServices(CarrosRepository repository)
         {
+            _repository = repository;
         }
 
         public async Task<List<Carros>> ListaCarros()
         {
-            var Carros = await BuscarTodos();
+            var Carros = await _repository.BuscarTodos();
             return Carros;
         }
 
@@ -22,7 +25,7 @@ namespace concessionária.Services
             {
                 throw new ArgumentNullException(nameof(id), "O ID não pode ser nulo.");
             }
-            var Carros = await BuscarPorID(id);
+            var Carros = await _repository.BuscarPorID(id);
             return Carros;
         }
 
@@ -47,7 +50,7 @@ namespace concessionária.Services
                 Carro.car_img = path;
             }
 
-            var Carros = await Add(Carro);
+            var Carros = await _repository.Add(Carro);
             return Carros;
         }
 
@@ -58,19 +61,19 @@ namespace concessionária.Services
             {
                 throw new ArgumentNullException(nameof(carro.car_id), "O ID não pode ser nulo.");
             }
-            var carroAT = await BuscarPorID(id);
+            var carroAT = await _repository.BuscarPorID(id);
             carroAT.car_name = carro.car_name;
             carroAT.car_modelo = carro.car_modelo;
             carroAT.car_cor = carro.car_cor;
             carroAT.car_img = carro.car_img;
-            var Carros = await Atualizar(carroAT);
+            var Carros = await _repository.Atualizar(carroAT);
             return Carros;
         }
 
 
         public async Task<bool> ApagarCarro(int carro)
         {
-            var CarroDeletado = await BuscarPorID(carro);
+            var CarroDeletado = await _repository.BuscarPorID(carro);
 
             if (CarroDeletado == null)
             {
@@ -81,11 +84,11 @@ namespace concessionária.Services
             {
                 var path = "wwwroot/" + CarroDeletado.car_img;
                 System.IO.File.Delete(path);
-                await Delete(CarroDeletado);
+                await _repository.Delete(CarroDeletado);
             }
             catch (Exception)
             {
-               await Delete(CarroDeletado);
+               await _repository.Delete(CarroDeletado);
             }
             return true;
         }
