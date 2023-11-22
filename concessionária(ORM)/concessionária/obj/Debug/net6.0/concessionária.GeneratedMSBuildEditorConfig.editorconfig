@@ -16,8 +16,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\silva\Documents\GitHub\ApiEmcsharp\concessionária(ORM)\concessionária
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/silva/Documents/GitHub/ApiEmcsharp/concessionária(ORM)/concessionária/Views/Carros/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fycm9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/silva/Documents/GitHub/ApiEmcsharp/concessionária(ORM)/concessionária/Views/Carros/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fycm9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/silva/Documents/GitHub/ApiEmcsharp/concessionária(ORM)/concessionária/Views/Carros/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fycm9zXFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/silva/Documents/GitHub/ApiEmcsharp/concessionária(ORM)/concessionária/Views/Home/Index.cshtml]

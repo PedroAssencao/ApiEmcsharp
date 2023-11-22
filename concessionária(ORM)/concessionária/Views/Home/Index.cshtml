@@ -1,8 +1,44 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+<style>
+    .conteiner{
+        display:flex;
+        align-items:center;
+        justify-content:center;   
+        gap:20px;
+    }
+    .Infos{
+        text-align:start;
+    }
+</style>
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Conssesionaria</h1>
+
+    <h2 style="margin: 3vh auto;">Carros</h2>
+    <div class="conteiner">
+        @foreach (var item in ViewBag.CarrosView)
+        {
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card">
+                        <img src="@item.car_img" width="300" height="300">
+                        <div class="card-body">
+                            <h5 class="card-title">Nome: @item.car_name</h5>
+                            <p class="card-text">Modelo: @item.car_modelo</p>
+                            <p class="card-text">Cor: @item.car_cor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          @*  <div class="teste">
+                <img  />
+                <div class="Infos">
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>*@
+        }
+    </div>
 </div>

@@ -13,6 +13,22 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\silva\\Documents\\GitHub\\ApiEmcsharp\\concessionária(ORM)\\concessionária\\wwwroot\\img\\Carros\\Carros-2.jpg",
+      "PackagePath": "staticwebassets\\img\\Carros\\Carros-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\silva\\Documents\\GitHub\\ApiEmcsharp\\concessionária(ORM)\\concessionária\\wwwroot\\img\\Carros\\Carros-3.jpg",
+      "PackagePath": "staticwebassets\\img\\Carros\\Carros-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\silva\\Documents\\GitHub\\ApiEmcsharp\\concessionária(ORM)\\concessionária\\wwwroot\\img\\Carros\\Carros-4.jpg",
+      "PackagePath": "staticwebassets\\img\\Carros\\Carros-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\silva\\Documents\\GitHub\\ApiEmcsharp\\concessionária(ORM)\\concessionária\\wwwroot\\img\\NotFoundImg.png",
+      "PackagePath": "staticwebassets\\img\\NotFoundImg.png"
+    },
+    {
       "Id": "C:\\Users\\silva\\Documents\\GitHub\\ApiEmcsharp\\concessionária(ORM)\\concessionária\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

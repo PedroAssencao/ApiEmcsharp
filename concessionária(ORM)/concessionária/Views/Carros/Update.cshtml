@@ -1,0 +1,28 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Atualizar Carros</h1>
+
+<form method="post" asp-controller="Carros" asp-action="Update">
+    <div class="conteiner">
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Nome</span>
+            <input type="text" class="form-control" value="@ViewBag.Infos.car_name" name="car_name" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Modelo</span>
+            <input type="text" class="form-control" value="@ViewBag.Infos.car_modelo" name="car_modelo" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Cor</span>
+            <input type="text" class="form-control" value="@ViewBag.Infos.car_cor" name="car_cor" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+    </div>
+    <div class="btn">
+        <a href="/Carros" class="btn btn-primary">Voltar</a>
+        <button type="submit" class="btn btn-success">Salvar</button>
+    </div>
+</form>

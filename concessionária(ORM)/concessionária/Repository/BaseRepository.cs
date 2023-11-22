@@ -33,10 +33,11 @@ namespace concessionária.Repository
             return model;
         }
 
-        public Task<List<Tmodel>> BuscarTodos()
+        public async Task<List<Tmodel>> BuscarTodos()
         {
-            return Task.Run(() => _context.Set<Tmodel>().ToListAsync().Result);
+            return await _context.Set<Tmodel>().ToListAsync();
         }
+
 
         public async Task<Tmodel?> BuscarPorID(int model)
         {

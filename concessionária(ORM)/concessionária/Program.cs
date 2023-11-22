@@ -9,8 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 
-builder.Services.AddDbContext<ConssesionariaDbContext>(options => 
-options.UseSqlServer(builder.Configuration.GetConnectionString("DataBase")));
+builder.Services.AddDbContext<ConssesionariaDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DataBase")));
 
 builder.Services.AddScoped<CarrosRepository>();
 builder.Services.AddScoped<MotosRepository>();

@@ -13,6 +13,7 @@ namespace concessionária.Data.Map
             Carros.Property(x => x.car_name).IsRequired().HasMaxLength(255);
             Carros.Property(x => x.car_cor).IsRequired().HasMaxLength(255);
             Carros.Property(x => x.car_modelo).IsRequired().HasMaxLength(255);
+            Carros.Property(x => x.car_img).IsRequired();
         }
     }
 }
