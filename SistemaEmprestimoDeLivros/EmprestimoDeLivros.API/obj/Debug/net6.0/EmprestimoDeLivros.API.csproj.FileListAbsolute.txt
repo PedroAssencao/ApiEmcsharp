@@ -64,3 +64,15 @@ C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\Em
 C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\EmprestimoDeLivros.API\obj\Debug\net6.0\EmprestimoDeLivros.API.pdb
 C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\EmprestimoDeLivros.API\obj\Debug\net6.0\EmprestimoDeLivros.API.genruntimeconfig.cache
 C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\EmprestimoDeLivros.API\obj\Debug\net6.0\ref\EmprestimoDeLivros.API.dll
+C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\EmprestimoDeLivros.API\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\EmprestimoDeLivros.API\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\EmprestimoDeLivros.API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\EmprestimoDeLivros.API\bin\Debug\net6.0\MediatR.dll
+C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\EmprestimoDeLivros.API\bin\Debug\net6.0\MediatR.Contracts.dll
+C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\EmprestimoDeLivros.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\EmprestimoDeLivros.API\bin\Debug\net6.0\SistemaEmprestimoDeLivros.Application.dll
+C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\EmprestimoDeLivros.API\bin\Debug\net6.0\SistemaEmprestimoDeLivros.Domain.dll
+C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\EmprestimoDeLivros.API\bin\Debug\net6.0\SistemaEmprestimoDeLivros.Persistence.dll
+C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\EmprestimoDeLivros.API\bin\Debug\net6.0\SistemaEmprestimoDeLivros.Application.pdb
+C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\EmprestimoDeLivros.API\bin\Debug\net6.0\SistemaEmprestimoDeLivros.Persistence.pdb
+C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\EmprestimoDeLivros.API\bin\Debug\net6.0\SistemaEmprestimoDeLivros.Domain.pdb

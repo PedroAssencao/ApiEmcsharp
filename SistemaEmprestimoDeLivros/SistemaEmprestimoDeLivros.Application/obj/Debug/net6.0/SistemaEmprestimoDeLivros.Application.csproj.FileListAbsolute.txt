@@ -1,0 +1,16 @@
+C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\SistemaEmprestimoDeLivros.Application\bin\Debug\net6.0\SistemaEmprestimoDeLivros.Application.deps.json
+C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\SistemaEmprestimoDeLivros.Application\bin\Debug\net6.0\SistemaEmprestimoDeLivros.Application.dll
+C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\SistemaEmprestimoDeLivros.Application\bin\Debug\net6.0\SistemaEmprestimoDeLivros.Application.pdb
+C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\SistemaEmprestimoDeLivros.Application\bin\Debug\net6.0\SistemaEmprestimoDeLivros.Domain.dll
+C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\SistemaEmprestimoDeLivros.Application\bin\Debug\net6.0\SistemaEmprestimoDeLivros.Domain.pdb
+C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\SistemaEmprestimoDeLivros.Application\obj\Debug\net6.0\SistemaEmprestimoDeLivros.Application.csproj.AssemblyReference.cache
+C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\SistemaEmprestimoDeLivros.Application\obj\Debug\net6.0\SistemaEmprestimoDeLivros.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\SistemaEmprestimoDeLivros.Application\obj\Debug\net6.0\SistemaEmprestimoDeLivros.Application.AssemblyInfoInputs.cache
+C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\SistemaEmprestimoDeLivros.Application\obj\Debug\net6.0\SistemaEmprestimoDeLivros.Application.AssemblyInfo.cs
+C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\SistemaEmprestimoDeLivros.Application\obj\Debug\net6.0\SistemaEmprestimoDeLivros.Application.csproj.CoreCompileInputs.cache
+C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\SistemaEmprestimoDeLivros.Application\obj\Debug\net6.0\SistemaEmprestimoDeLivros.Application.sourcelink.json
+C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\SistemaEmprestimoDeLivros.Application\obj\Debug\net6.0\SistemaEmprestimoDeLivros.Application.csproj.CopyComplete
+C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\SistemaEmprestimoDeLivros.Application\obj\Debug\net6.0\SistemaEmprestimoDeLivros.Application.dll
+C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\SistemaEmprestimoDeLivros.Application\obj\Debug\net6.0\refint\SistemaEmprestimoDeLivros.Application.dll
+C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\SistemaEmprestimoDeLivros.Application\obj\Debug\net6.0\SistemaEmprestimoDeLivros.Application.pdb
+C:\Users\Pedro Marcelo\Documents\GitHub\ApiEmcsharp\SistemaEmprestimoDeLivros\SistemaEmprestimoDeLivros.Application\obj\Debug\net6.0\ref\SistemaEmprestimoDeLivros.Application.dll
