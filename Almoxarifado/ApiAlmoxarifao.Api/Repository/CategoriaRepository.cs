@@ -8,5 +8,10 @@ namespace ApiAlmoxarifao.Api.Repository
         public CategoriaRepository(AlmoxarifadoContext context) : base(context)
         {
         }
+
+        public async Task<Categoria> GetCategoriaPorId(int id) => await _context.Set<Categoria>().FindAsync(id);
+    
+
+    
     }
 }

@@ -18,10 +18,14 @@ namespace ApiAlmoxarifao.Api.Controllers
 
         [HttpGet]
         [Route("/Categorias")]
-        public List<Categoria> GetTodasCategorias() => _repository.GetAll();
+        public async Task<List<Categoria>> GetTodasCategorias() => await _repository.GetAll();
 
         [HttpPost]
         [Route("/Categorias/Create")]
         public async Task<IActionResult> CreateCategorias(Categoria Model) => Ok(await _repository.Adicionar(Model));
+
+        [HttpDelete]
+        [Route("/Categorias/Delete/{id}")]
+        public IActionResult DeletarCategoria(int id) => Ok(_repository.Delete(id));
     }
 }

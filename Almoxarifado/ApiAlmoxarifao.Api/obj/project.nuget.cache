@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XSfBt6tNW6IikVcryGZRkYr5KpudA5+XMK3NFMAhGWP5KKI5b0mXj1aoeFuWq9CGL5FqegiSBTxDX11kT6WYVQ==",
+  "dgSpecHash": "f9j3K3hjeJkghNepFD+RpgLVMzTV339cZ9Y7ebIdpYrHWM3siux77sq1rX2211V2i5PoZdxdja+HCy0HJQyVlQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\manha.cetafest\\Documents\\Almoxarifado\\ApiAlmoxarifao.Api\\ApiAlmoxarifao.Api.csproj",
+  "projectFilePath": "C:\\Users\\manha.cetafest\\Documents\\GitHub\\ApiEmcsharp\\Almoxarifado\\ApiAlmoxarifao.Api\\ApiAlmoxarifao.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\manha.cetafest\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\manha.cetafest\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

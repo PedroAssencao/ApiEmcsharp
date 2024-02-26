@@ -18,7 +18,7 @@ namespace ApiAlmoxarifao.Api.Controllers
 
         [HttpGet]
         [Route("/produto")]
-        public List<Produto> GetTodosProdutos() => _repo.GetAll();
+        public async Task<List<Produto>> GetTodosProdutos() => await _repo.GetProdutos();
 
         [HttpPost]
         [Route("/produto/Create")]

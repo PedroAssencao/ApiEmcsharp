@@ -5,8 +5,23 @@ namespace ApiAlmoxarifao.Api.Repository
 {
     public class ProdutoRepositroy : BaseRepository<Produto>
     {
-        public ProdutoRepositroy(AlmoxarifadoContext context) : base(context)
+        protected readonly CategoriaRepository _categoria;
+
+        public ProdutoRepositroy(CategoriaRepository categoria, AlmoxarifadoContext context) : base(context)
         {
+            _categoria = categoria;
+        }
+
+        public async Task<List<Produto>> GetProdutos()
+        {
+            var a = await GetAll();
+            foreach (var item in a)
+            {
+                var b = await _categoria.GetCategoriaPorId(Convert.ToInt32(item.CatId));
+                item.Cat = b;
+            }
+            return a;
+
         }
 
         public async Task<Produto> AdicionarImagem(ProdutoView model)

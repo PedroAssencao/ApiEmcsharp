@@ -18,7 +18,7 @@ namespace ApiAlmoxarifao.Api.Controllers
 
         [HttpGet]
         [Route("/Departamento")]
-        public List<Departamento> GetTodosDepartamentos() => _departamentoRepository.GetAll();
+        public async Task<List<Departamento>> GetTodosDepartamentos() => await _departamentoRepository.GetAll();
 
         [HttpPost]
         [Route("/Create/Departamento")]

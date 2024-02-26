@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\manha.cetafest\\Documents\\Almoxarifado\\ApiAlmoxarifao.Api\\ApiAlmoxarifao.Api.csproj": {}
+    "C:\\Users\\manha.cetafest\\Documents\\GitHub\\ApiEmcsharp\\Almoxarifado\\ApiAlmoxarifao.Api\\ApiAlmoxarifao.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\manha.cetafest\\Documents\\Almoxarifado\\ApiAlmoxarifao.Api\\ApiAlmoxarifao.Api.csproj": {
+    "C:\\Users\\manha.cetafest\\Documents\\GitHub\\ApiEmcsharp\\Almoxarifado\\ApiAlmoxarifao.Api\\ApiAlmoxarifao.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\manha.cetafest\\Documents\\Almoxarifado\\ApiAlmoxarifao.Api\\ApiAlmoxarifao.Api.csproj",
+        "projectUniqueName": "C:\\Users\\manha.cetafest\\Documents\\GitHub\\ApiEmcsharp\\Almoxarifado\\ApiAlmoxarifao.Api\\ApiAlmoxarifao.Api.csproj",
         "projectName": "ApiAlmoxarifao.Api",
-        "projectPath": "C:\\Users\\manha.cetafest\\Documents\\Almoxarifado\\ApiAlmoxarifao.Api\\ApiAlmoxarifao.Api.csproj",
+        "projectPath": "C:\\Users\\manha.cetafest\\Documents\\GitHub\\ApiEmcsharp\\Almoxarifado\\ApiAlmoxarifao.Api\\ApiAlmoxarifao.Api.csproj",
         "packagesPath": "C:\\Users\\manha.cetafest\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\manha.cetafest\\Documents\\Almoxarifado\\ApiAlmoxarifao.Api\\obj\\",
+        "outputPath": "C:\\Users\\manha.cetafest\\Documents\\GitHub\\ApiEmcsharp\\Almoxarifado\\ApiAlmoxarifao.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\manha.cetafest\\AppData\\Roaming\\NuGet\\NuGet.Config",
