@@ -19,6 +19,7 @@ namespace ApiAlmoxarifao.Api.DAL
 
         public virtual DbSet<Categoria> Categorias { get; set; } = null!;
         public virtual DbSet<Departamento> Departamentos { get; set; } = null!;
+        public virtual DbSet<Funcionario> Funcionarios { get; set; } = null!;
         public virtual DbSet<Produto> Produtos { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -40,7 +41,15 @@ namespace ApiAlmoxarifao.Api.DAL
             modelBuilder.Entity<Departamento>(entity =>
             {
                 entity.HasKey(e => e.DepId)
-                    .HasName("PK__departam__BB4BD8F8CB71FE79");
+                    .HasName("PK__departam__BB4BD8F84F7A2B81");
+
+                entity.Property(e => e.DepSituacao).HasDefaultValueSql("((0))");
+            });
+
+            modelBuilder.Entity<Funcionario>(entity =>
+            {
+                entity.HasKey(e => e.FunId)
+                    .HasName("PK__Funciona__35A47928D59F69CE");
             });
 
             modelBuilder.Entity<Produto>(entity =>

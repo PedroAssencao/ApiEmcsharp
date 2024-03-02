@@ -2,13 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text.Json.Serialization;
-using ApiAlmoxarifao.Api.Repository;
 using Microsoft.EntityFrameworkCore;
 
 namespace ApiAlmoxarifao.Api.Models
 {
-
     [Table("produtos")]
     public partial class Produto
     {
@@ -25,7 +22,8 @@ namespace ApiAlmoxarifao.Api.Models
         [Column("pro_estoque")]
         public int? ProEstoque { get; set; }
         [Column("cat_id")]
-        public int? CatId { get; set; }        
+        public int? CatId { get; set; }
+
         [ForeignKey(nameof(CatId))]
         [InverseProperty(nameof(Categoria.Produtos))]
         public virtual Categoria? Cat { get; set; }

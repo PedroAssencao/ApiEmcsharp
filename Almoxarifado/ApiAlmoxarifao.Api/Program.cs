@@ -20,6 +20,7 @@ builder.Services.AddDbContext<AlmoxarifadoContext>(options =>
 builder.Services.AddScoped<ProdutoRepositroy>();
 builder.Services.AddScoped<CategoriaRepository>();
 builder.Services.AddScoped<DepartamentoRepository>();
+builder.Services.AddScoped<FuncionaiosRepository>();
 
 var app = builder.Build();
 

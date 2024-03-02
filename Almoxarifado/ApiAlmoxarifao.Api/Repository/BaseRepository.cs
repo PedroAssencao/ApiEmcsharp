@@ -27,6 +27,7 @@ namespace ApiAlmoxarifao.Api.Repository
         {
             var a = await GetPorId(id);
             _context.Remove(a);
+            _context.SaveChanges();
             return true;
         }
 
