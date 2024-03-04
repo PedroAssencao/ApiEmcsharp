@@ -27,6 +27,9 @@ namespace ApiAlmoxarifao.Api.Controllers
         [HttpPost]
         [Route("/Funcionarios/Create")]
         public async Task<IActionResult> CriarFuncinario(Funcionario Model) => Ok(await _context.Adicionar(Model));
+        [HttpPut]
+        [Route("/Funcionario/Update")]
+        public async Task<Funcionario> AtualizarFuncionario(Funcionario Model) => await _context.Update(Model); 
 
         [HttpDelete]
         [Route("/Funcionarios/Delete/{id}")]

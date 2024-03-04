@@ -20,7 +20,9 @@ namespace ApiAlmoxarifao.Api.DAL
         public virtual DbSet<Categoria> Categorias { get; set; } = null!;
         public virtual DbSet<Departamento> Departamentos { get; set; } = null!;
         public virtual DbSet<Funcionario> Funcionarios { get; set; } = null!;
+        public virtual DbSet<MotivoSaidum> MotivoSaida { get; set; } = null!;
         public virtual DbSet<Produto> Produtos { get; set; } = null!;
+        public virtual DbSet<Requisicao> Requisicaos { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -52,6 +54,17 @@ namespace ApiAlmoxarifao.Api.DAL
                     .HasName("PK__Funciona__35A47928D59F69CE");
             });
 
+            modelBuilder.Entity<MotivoSaidum>(entity =>
+            {
+                entity.HasKey(e => e.MotId)
+                    .HasName("PK__MotivoSa__E0752241C9225504");
+
+                entity.HasOne(d => d.Cat)
+                    .WithMany(p => p.MotivoSaida)
+                    .HasForeignKey(d => d.CatId)
+                    .HasConstraintName("FK__MotivoSai__cat_i__5CD6CB2B");
+            });
+
             modelBuilder.Entity<Produto>(entity =>
             {
                 entity.HasKey(e => e.ProId)
@@ -61,6 +74,12 @@ namespace ApiAlmoxarifao.Api.DAL
                     .WithMany(p => p.Produtos)
                     .HasForeignKey(d => d.CatId)
                     .HasConstraintName("FK__produtos__cat_id__3A81B327");
+            });
+
+            modelBuilder.Entity<Requisicao>(entity =>
+            {
+                entity.HasKey(e => e.ReqId)
+                    .HasName("PK__requisic__1513A6FB0831AEEC");
             });
 
             OnModelCreatingPartial(modelBuilder);

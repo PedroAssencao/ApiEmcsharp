@@ -31,5 +31,12 @@ namespace ApiAlmoxarifao.Api.Repository
             return true;
         }
 
+        public async Task<T> Update(T model) 
+        {
+            _context.Update(model);
+            await _context.SaveChangesAsync();
+            return model;
+        }
+
     }
 }

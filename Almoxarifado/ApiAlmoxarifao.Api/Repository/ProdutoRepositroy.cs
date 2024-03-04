@@ -37,5 +37,20 @@ namespace ApiAlmoxarifao.Api.Repository
             return await Adicionar(produto);
 
         }
+
+        public async Task<Produto> AtualizarProduto(ProdutoView model)
+        {
+            var caminho = Path.Combine("Storage", model.ProImg.FileName);
+            using Stream filestream = new FileStream(caminho, FileMode.Create);
+            model.ProImg.CopyTo(filestream);
+            var produto = new Produto();
+            produto.ProNome = model.ProNome;
+            produto.ProImg = caminho;
+            produto.ProEstoque = model.ProEstoque;
+            produto.CatId = model.CatId;
+            produto.ProId = model.ProId;
+            return await Update(produto);
+
+        }
     }
 }

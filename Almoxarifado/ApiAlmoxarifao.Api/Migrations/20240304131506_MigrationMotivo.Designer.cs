@@ -4,6 +4,7 @@ using ApiAlmoxarifao.Api.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApiAlmoxarifao.Api.Migrations
 {
     [DbContext(typeof(AlmoxarifadoContext))]
-    partial class AlmoxarifadoContextModelSnapshot : ModelSnapshot
+    [Migration("20240304131506_MigrationMotivo")]
+    partial class MigrationMotivo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -188,34 +190,6 @@ namespace ApiAlmoxarifao.Api.Migrations
                     b.HasIndex("CatId");
 
                     b.ToTable("produtos");
-                });
-
-            modelBuilder.Entity("ApiAlmoxarifao.Api.Models.Requisicao", b =>
-                {
-                    b.Property<int>("ReqId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("req_id");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReqId"), 1L, 1);
-
-                    b.Property<string>("ReqData")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(255)")
-                        .HasColumnName("req_data");
-
-                    b.Property<string>("ReqObservacao")
-                        .HasMaxLength(255)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(255)")
-                        .HasColumnName("req_observacao");
-
-                    b.HasKey("ReqId")
-                        .HasName("PK__requisic__1513A6FB0831AEEC");
-
-                    b.ToTable("requisicao");
                 });
 
             modelBuilder.Entity("ApiAlmoxarifao.Api.Models.MotivoSaidum", b =>

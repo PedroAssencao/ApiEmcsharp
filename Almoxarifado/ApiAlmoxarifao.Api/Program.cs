@@ -21,6 +21,8 @@ builder.Services.AddScoped<ProdutoRepositroy>();
 builder.Services.AddScoped<CategoriaRepository>();
 builder.Services.AddScoped<DepartamentoRepository>();
 builder.Services.AddScoped<FuncionaiosRepository>();
+builder.Services.AddScoped<MotivoRepository>();
+builder.Services.AddScoped<RequisicaoRepository>();
 
 var app = builder.Build();
 

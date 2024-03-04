@@ -11,6 +11,7 @@ namespace ApiAlmoxarifao.Api.Models
     {
         public Categoria()
         {
+            MotivoSaida = new HashSet<MotivoSaidum>();
             Produtos = new HashSet<Produto>();
         }
 
@@ -22,6 +23,8 @@ namespace ApiAlmoxarifao.Api.Models
         [Unicode(false)]
         public string? CatDescricao { get; set; }
 
+        [InverseProperty(nameof(MotivoSaidum.Cat))]
+        public virtual ICollection<MotivoSaidum> MotivoSaida { get; set; }
         [InverseProperty(nameof(Produto.Cat))]
         public virtual ICollection<Produto> Produtos { get; set; }
     }
