@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 
 namespace ApiAlmoxarifao.Api.Models
@@ -23,8 +24,10 @@ namespace ApiAlmoxarifao.Api.Models
         [Unicode(false)]
         public string? CatDescricao { get; set; }
 
+        [JsonIgnore]
         [InverseProperty(nameof(MotivoSaidum.Cat))]
         public virtual ICollection<MotivoSaidum> MotivoSaida { get; set; }
+        [JsonIgnore]
         [InverseProperty(nameof(Produto.Cat))]
         public virtual ICollection<Produto> Produtos { get; set; }
     }
