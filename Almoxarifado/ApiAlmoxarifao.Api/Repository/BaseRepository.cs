@@ -16,8 +16,8 @@ namespace ApiAlmoxarifao.Api.Repository
 
         public async Task<T> Adicionar(T Model)
         {
-            _context.AddAsync(Model);
-            _context.SaveChanges();
+            await _context.AddAsync(Model);
+            await _context.SaveChangesAsync();
             return Model;
         }
 
@@ -25,6 +25,7 @@ namespace ApiAlmoxarifao.Api.Repository
 
         public async Task<bool> Delete(int id)
         {
+            
             var a = await GetPorId(id);
             _context.Remove(a);
             _context.SaveChanges();

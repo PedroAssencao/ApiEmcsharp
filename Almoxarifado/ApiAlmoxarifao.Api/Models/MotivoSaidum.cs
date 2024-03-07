@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 
 namespace ApiAlmoxarifao.Api.Models
@@ -17,7 +18,7 @@ namespace ApiAlmoxarifao.Api.Models
         public string? MotDescricao { get; set; }
         [Column("cat_id")]
         public int? CatId { get; set; }
-
+        [JsonIgnore]
         [ForeignKey(nameof(CatId))]
         [InverseProperty(nameof(Categoria.MotivoSaida))]
         public virtual Categoria? Cat { get; set; }

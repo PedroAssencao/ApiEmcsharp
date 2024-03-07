@@ -20,6 +20,7 @@ namespace ApiAlmoxarifao.Api.DAL
         public virtual DbSet<Categoria> Categorias { get; set; } = null!;
         public virtual DbSet<Departamento> Departamentos { get; set; } = null!;
         public virtual DbSet<Funcionario> Funcionarios { get; set; } = null!;
+        public virtual DbSet<ItemRequisicao> ItemRequisicaos { get; set; } = null!;
         public virtual DbSet<MotivoSaidum> MotivoSaida { get; set; } = null!;
         public virtual DbSet<Produto> Produtos { get; set; } = null!;
         public virtual DbSet<Requisicao> Requisicaos { get; set; } = null!;
@@ -54,6 +55,22 @@ namespace ApiAlmoxarifao.Api.DAL
                     .HasName("PK__Funciona__35A47928D59F69CE");
             });
 
+            modelBuilder.Entity<ItemRequisicao>(entity =>
+            {
+                entity.HasKey(e => e.ItemId)
+                    .HasName("PK__ItemRequ__52020FDDE8FF6C15");
+
+                entity.HasOne(d => d.Pro)
+                    .WithMany(p => p.ItemRequisicaos)
+                    .HasForeignKey(d => d.ProId)
+                    .HasConstraintName("FK__ItemRequi__pro_i__0C85DE4D");
+
+                entity.HasOne(d => d.Req)
+                    .WithMany(p => p.ItemRequisicaos)
+                    .HasForeignKey(d => d.ReqId)
+                    .HasConstraintName("FK__ItemRequi__req_i__0B91BA14");
+            });
+
             modelBuilder.Entity<MotivoSaidum>(entity =>
             {
                 entity.HasKey(e => e.MotId)
@@ -79,7 +96,7 @@ namespace ApiAlmoxarifao.Api.DAL
             modelBuilder.Entity<Requisicao>(entity =>
             {
                 entity.HasKey(e => e.ReqId)
-                    .HasName("PK__requisic__1513A6FB0831AEEC");
+                    .HasName("PK__requisic__1513A6FBBC4D53F0");
             });
 
             OnModelCreatingPartial(modelBuilder);
